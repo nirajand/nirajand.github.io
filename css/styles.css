@@ -1,0 +1,483 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+
+
+:root {
+    --main-color: #007BFF;
+    --main-text-color: #006fe6;
+    --title-color: #ef2723;
+    --accent-color: #ff6600;
+    --text-color: #333333;
+    --footer-color: #555555;
+    --font-family: 'Poppins', sans-serif;
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: var(--main-color);
+    padding: 30px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    transition: background-color 0.4s ease-in-out;
+}
+
+header:hover {
+    background-color: var(--main-color);
+}
+
+/* Title stays on the left */
+.logo {
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 36px;
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: color 0.4s ease-in-out;
+    letter-spacing: 1px;
+}
+
+.logo:hover {
+    color: #ff5d18;
+}
+
+/* Navigation menu items stay on the right */
+.nav-menu {
+    margin-top: -35px;
+    list-style: none;
+    display: flex;
+    margin-left: 770px;
+}
+
+.nav-menu-item {
+    margin-left: 100px;
+}
+
+/* Background color change on scroll */
+body.scrolled header {
+    background-color: #222;
+    /* Change to your desired color on scroll */
+}
+
+/* Add smooth scrolling effect when clicking on navigation links */
+.nav-menu-link {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-menu-link:hover {
+    color: #ffccb7;
+    font-weight: 500;
+}
+
+/* Hero Section Styles */
+.hero {
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0px;
+    padding: 40px;
+    margin-top: 8 0px;
+}
+
+.hero-content {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-image {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 30px;
+    font-family: 'Poppins', sans-serif;
+    align-self: center;
+}
+
+.hero-heading {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 36px;
+    color: var(--main-text-color);
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.hero-subheading {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 24px;
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+
+.section-heading {
+    color: var(--title-color)
+}
+
+/* Biography Section Styles */
+.biography {
+    background-color: var(--accent-color);
+    padding: 40px 0;
+    font-family: 'Poppins', sans-serif;
+    padding: 40px 0;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.biography-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.biography-image {
+    width: 40%;
+    min-width: 500px;
+    border-radius: 10px;
+    object-fit: contain;
+    image-resolution: from-image;
+    image-rendering: auto;
+}
+
+.biography-text {
+    width: 55%;
+    min-width: 300px;
+}
+
+/* Resume Section Styles */
+.resume {
+    padding: 40px 0;
+    padding: 20px;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.resume-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.resume-education {
+    width: 45%;
+    min-width: 300px;
+}
+
+.resume-work {
+    width: 45%;
+    min-width: 300px;
+}
+
+.resume-skills {
+    width: 100%;
+}
+
+.resume-item {
+    margin-bottom: 20px;
+}
+
+.resume-item-heading {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    color: var(--main-color);
+    margin-bottom: 10px;
+}
+
+.resume-item-subheading {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+.resume-item-paragraph {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    color: var(--text-color);
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+/* Contact Section Styles */
+.contact {
+    background-color: var(--main-color);
+    padding: 40px 0;
+    margin-bottom: 20px;
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+    color: white
+}
+
+.contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.contact-image {
+    width: 40%;
+    min-width: 300px;
+}
+
+.contact-text {
+    width: 55%;
+    min-width: 300px;
+}
+
+.contact-head {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.contact-text {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    color: white;
+    margin-bottom: 30px;
+}
+
+/* Achievements Section Styles */
+
+.achievements {
+    background-color: #eaeaea;
+    padding: 40px 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.achievements .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.achievement-item {
+    width: 45%;
+    min-width: 300px;
+    margin-bottom: 20px;
+}
+
+.achievement-item-heading {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    color: var(--main-color);
+    margin-bottom: 10px;
+}
+
+.achievement-item-paragraph {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    color: var(--text-color);
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+/* Extra Experiences Section Styles */
+.extra-experiences {
+    background-color: #dddddd;
+    padding: 40px 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.extra-experiences .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.experience-item {
+    width: 45%;
+    min-width: 300px;
+    margin-bottom: 20px;
+}
+
+.experience-item-heading {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    color: var(--main-color);
+    margin-bottom: 10px;
+}
+
+.experience-item-paragraph {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    color: var(--text-color);
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: var(--footer-color);
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 70px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+}
+
+.social-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.social-link {
+    font-size: 24px;
+    color: #fff;
+    margin-right: 20px;
+    text-decoration: none;
+}
+
+/* Add hover effect for social links */
+.social-link:hover {
+    opacity: 0.8;
+}
+
+/* Add styles for the hamburger menu button */
+.hamburger {
+    display: none;
+    /* Initially hide the button */
+    font-size: 24px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: white;
+}
+
+.wave {
+    animation-name: wave-animation;
+    /* Refers to the name of your @keyframes element below */
+    animation-duration: 2.5s;
+    /* Change to speed up or slow down */
+    animation-iteration-count: infinite;
+    /* Never stop waving :) */
+    transform-origin: 70% 70%;
+    /* Pivot around the bottom-left palm */
+    display: inline-block;
+    font-size: 28px;
+}
+
+@keyframes wave-animation {
+    0% {
+        transform: rotate(0.0deg)
+    }
+
+    10% {
+        transform: rotate(14.0deg)
+    }
+
+    /* The following five values can be played with to make the waving more or less extreme */
+    20% {
+        transform: rotate(-8.0deg)
+    }
+
+    30% {
+        transform: rotate(14.0deg)
+    }
+
+    40% {
+        transform: rotate(-4.0deg)
+    }
+
+    50% {
+        transform: rotate(10.0deg)
+    }
+
+    60% {
+        transform: rotate(0.0deg)
+    }
+
+    /* Reset for the last half to pause */
+    100% {
+        transform: rotate(0.0deg)
+    }
+}
+
+
+/* Media query for smaller screens */
+@media only screen and (max-width: 768px) {
+
+    /* Hide the regular navigation menu on small screens */
+    .nav-menu {
+        display: none;
+    }
+
+    /* Show the hamburger menu button */
+    .hamburger {
+        display: block;
+    }
+
+    /* Style the dropdown menu */
+    .nav-menu-dropdown {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        /* Adjust as needed */
+        left: 0;
+        width: 100%;
+        background-color: var(--main-color);
+    }
+
+    .nav-menu-dropdown a {
+        padding: 15px;
+        color: #fff;
+        text-decoration: none;
+        display: block;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+    .nav-menu-dropdown a:hover {
+        background-color: #ffccb7;
+    }
+
+    /* Show the dropdown menu when the hamburger button is clicked */
+    .hamburger:checked+header .nav-menu-dropdown {
+        display: flex;
+    }
+}

@@ -1,0 +1,104 @@
+.text {
+    font-family: 'Poppins', sans-serif;
+}
+
+.h1-text {
+    font-size: 55px;
+}
+
+.p-text {
+    font-size: 21px;
+}
+
+.chart-text {
+    font-size: 18px;
+}
+
+.row-container {
+    height: 800px;
+    width: 100%;
+}
+
+.source {
+    font-size: 13px;
+    font-style: italic;
+}
+
+.note {
+    font-size: 13px;
+    font-style: italic;
+    background-color: #d7ef88;
+    padding: 10px 15px;
+    border-radius: 4px;
+    margin-right: 5px;
+}
+
+.text {
+    font-family: 'Poppins', sans-serif;
+}
+
+.h1-text {
+    font-size: 55px;
+}
+
+.p-text {
+    font-size: 21px;
+}
+
+.chart-text {
+    font-size: 18px;
+}
+
+.row-container {
+    height: 800px;
+    width: 100%;
+}
+
+.source {
+    .text {
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .h1-text {
+        font-size: 55px;
+    }
+
+    .p-text {
+        font-size: 21px;
+    }
+
+    .chart-text {
+        font-size: 18px;
+    }
+
+    .row-container {
+        height: 800px;
+        width: 100%;
+    }
+
+    .source {
+        font-size: 13px;
+        font-style: italic;
+    }
+
+    .note {
+        font-size: 13px;
+        font-style: italic;
+        background-color: #d7ef88;
+        padding: 10px 15px;
+        border-radius: 4px;
+        margin-right: 5px;
+    }
+
+    font-size: 13px;
+    font-style: italic;
+}
+
+.note {
+    font-size: 13px;
+    font-style: italic;
+    background-color: #d7ef88;
+    padding: 10px 15px;
+    border-radius: 4px;
+    margin-right: 5px;
+}
