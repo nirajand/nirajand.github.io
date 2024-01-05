@@ -25,14 +25,14 @@ function typingEffect () {
   let wordIndex = 0;
   let charIndex = 0;
   let isDeleting = false;
-  const typingSpeed = 100;
-  const delay = 1000;
+  const typingSpeed = 90;
+  const delay = 900;
   const wordElement = document.getElementById ('value');
 
   function type () {
     const currentWord = words[wordIndex];
     if (isDeleting) {
-      wordElement.style.transition = 'opacity 0.3s ease-in-out'; // Smooth transition when deleting
+      wordElement.style.transition = 'opacity 0.2s ease-in-out'; // Smooth transition when deleting
       wordElement.textContent = currentWord.substring (0, charIndex - 1);
       charIndex--;
     } else {
