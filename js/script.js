@@ -12,7 +12,14 @@ window.addEventListener ('scroll', function () {
 
 // Text replace with animation
 
-const words = ['Python', 'Web', 'Java', 'C++'];
+const words = [
+  'Python Developer',
+  'Web Designer',
+  'Java Developer',
+  'Content Creator',
+  'C++ Developer',
+  'Digital Marketer',
+];
 
 function typingEffect () {
   let wordIndex = 0;
