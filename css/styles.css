@@ -228,7 +228,7 @@ body.scrolled header {
 
 /* Contact Section Styles */
 .contact {
-    background-color: var(--main-color);
+    background-color: #202996;
     padding: 40px 0;
     margin-bottom: 20px;
     padding: 20px;
@@ -480,4 +480,27 @@ body.scrolled header {
     .hamburger:checked+header .nav-menu-dropdown {
         display: flex;
     }
+}
+
+.portfolio-logo {
+    display: flex;
+    max-width: 300px;
+}
+
+.social-icon {
+    flex-direction: row;
+    max-block-size: 40px;
+    padding: 8px 10px;
+    max-height: 98%
+}
+
+.social-icon img {
+    height: 40px;
+    width: 40px;
+    margin: 3px 5px;
+}
+
+.social-icon img:hover {
+    background-color: #eaeaea;
+    border-radius: 100%;
 }
