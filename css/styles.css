@@ -3,7 +3,7 @@
 
 :root {
     --main-color: #007BFF;
-    --main-text-color: #006fe6;
+    --main-text-color: #69829c;
     --title-color: #ef2723;
     --accent-color: #ff6600;
     --text-color: #333333;
@@ -319,13 +319,11 @@ body.scrolled header {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
 }
 
 .experience-item {
     width: 45%;
-    min-width: 300px;
-    margin-bottom: 20px;
+    min-width: 450px;
 }
 
 .experience-item-heading {
@@ -333,7 +331,6 @@ body.scrolled header {
     font-weight: 500;
     font-size: 24px;
     color: var(--main-color);
-    margin-bottom: 10px;
 }
 
 .experience-item-paragraph {
@@ -356,6 +353,9 @@ body.scrolled header {
 .footer-content {
     display: flex;
     justify-content: center;
+    color: #eaeaea;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
 }
 
 .social-links {
