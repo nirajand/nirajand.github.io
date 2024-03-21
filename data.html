@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Family Data</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+            rel="stylesheet">
+        <style>
+            body {
+                font-family: 'Montserrat', sans-serif;
+                background-color: #f9fafb;
+            }
+
+            div .questionnaire {
+                display: grid;
+            }
+
+            ol > li{
+                margin: 10px 50px;
+            }
+
+            ol > li:nth-child(5n+1) {
+                color: #21190e; /* Dark brown */
+            }
+            
+            ol > li:nth-child(5n+2) {
+                color: #5C3429; /* Brown */
+            }
+            
+            ol > li:nth-child(5n+3) {
+                color: #431610; /* Dark red */
+            }
+            
+            ol > li:nth-child(5n+4) {
+                color: #550407; /* Red */
+            }
+            
+            ol > li:nth-child(5n+5) {
+                color: #2D0004; /* Dark red */
+            }
+            
+
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                border: 1px solid #d2d6dc;
+                font-size: 14px;
+            }
+            
+            th, td {
+                border: 2px solid #957536;
+                padding: 10px;
+                text-align: left;
+                width: 800px;
+            }
+            
+            th {
+                background-color: #f6cd7a;
+                color: #1c2a31;
+            }
+            
+            tbody tr:nth-child(even) {
+                background-color: #404436;
+                color: #f6cd7a;
+            }
+            
+            tbody tr:hover {
+                background-color: #f7b596;
+                color:#1c2a31;
+            }
+            
+            /* Media queries for different phone sizes */
+            @media screen and (max-width: 412px) and (max-height: 883px) {
+                table {
+                    font-size: 12px; /* Decrease font size for smaller devices */
+                    overflow-x: auto; /* Add horizontal scroll for smaller screens */
+                }
+            }
+            
+            @media screen and (max-width: 360px) and (max-height: 760px) {
+                table {
+                    font-size: 11px; /* Further decrease font size for even smaller devices */
+                }
+            }
+            
+            @media screen and (max-width: 375px) and (max-height: 812px) {
+                table {
+                    font-size: 11px; /* Decrease font size for iPhone X and similar devices */
+                }
+            }
+            
+            h2{
+                font-size: 45px;
+                align-items: center;
+                text-align: center;
+                margin: 20px 20px 20px 20px;
+                padding: 10px;
+                color:#550407;
+            }
+
+            h3{
+                font-size: 30px;
+                align-items: center;
+                margin: 20px 20px 20px 20px;
+                padding: 10px;
+                color: #404436;
+            }
+
+            h4{
+                font-size: 25px;
+                margin: 20px 20px 20px 20px;
+                padding: 10px;
+                color: #5C3429;
+            }
+        </style>
+    </head>
+    <body class="bg-gray-100 p-4">
+        <h2 class="font-semibold mb-4">Family Data</h2>
+
+        <br>
+
+        <div class="question"
+            style="width: 800px; display:flex; margin-left:30px;">
+            <p style="text-align: justify; "><strong
+                    style="color: #2D0004;">Question:</strong> Prepare
+                a set of questionnaire about
+                social indicators (size of family,age structure of family
+                members,level of education) and economic structure (income,
+                expenditure,saving,status of employment and unemployment). Then
+                visit your selected field of study And collect the primary data
+                using census or sampling method. Present such data in
+                diagram.</p>
+        </div>
+        <div class="mb-4 questionnaire">
+            <h3 class="font-semibold mb-2">Questionnaires:</h3>
+            <h4 class="font-semibold mb-1">Social Indicators:</h4>
+            <ol class="list-decimal pl-6">
+                <li class="text-blue-600">How many people live in your home,
+                    including you?</li>
+                <li class="text-blue-600">What are the ages of everyone who
+                    lives with you?</li>
+                <li class="text-blue-600">How many children under 18 live with
+                    you?</li>
+                <li class="text-blue-600">How many adults between 18-64 years
+                    old live with you?</li>
+                <li class="text-blue-600">How many elderly people 65 and over
+                    live with you?</li>
+                <li class="text-blue-600">What is the highest level of education
+                    completed by the main
+                    income earner?</li>
+                <li class="text-blue-600">How would you describe the overall
+                    health of your family?
+                    (Excellent, good, fair, poor)</li>
+                <li class="text-blue-600">Does anyone in your home have a
+                    long-term health problem or
+                    disability?</li>
+                <li class="text-blue-600">What is your family's religion, if
+                    any?</li>
+            </ol>
+            <h4 class="text-md font-semibold mb-1 mt-4">Economic Structure:</h4>
+            <ol class="list-decimal pl-6">
+                <li class="text-blue-600">What was the total income for your
+                    household last year, from
+                    all sources?</li>
+                <li class="text-blue-600">What are the main ways your household
+                    earned income last
+                    year? (Jobs, self-employment, etc.)</li>
+                <li class="text-blue-600">What are your biggest monthly expenses
+                    for your household?
+                    (Rent, food, utilities, etc.)</li>
+                <li class="text-blue-600">Roughly what percentage of your
+                    household's income is spent
+                    on housing costs?</li>
+                <li class="text-blue-600">Were you able to save any money from
+                    your income at the end
+                    of last year?</li>
+                <li class="text-blue-600">How many adults in your household
+                    currently have a full-time
+                    or part-time job?</li>
+            </ol>
+        </div>
+        <br><br><br>
+        <p class="text-gray-700 mb-4">
+            I followed a systematic approach resembling a census method.
+            Firstly, I created a set of questions divided into two main
+            categories: social indicators and economic structure. For social
+            indicators, questions revolved around the size of the family,
+            the age structure of family members, and the level of education
+            attained. Meanwhile, for economic structure, questions
+            encompassed income sources, expenditures, savings, and
+            employment status.</p>
+        <p class="text-gray-700 mb-4">
+            After designing the questionnaire, I visited my
+            selected field of study, which in this case, is my neighborhood.
+            In this visit, I approached at least 10 different families,
+            explaining the purpose of my survey and requesting their
+            participation. Upon their agreement, I proceeded to collect the
+            data by asking them the questions outlined in the questionnaire.
+            This approach mirrors the methodical nature of a census, aiming
+            to gather information from all households within the selected
+            area.
+        </p>
+        <p class="text-gray-700 mb-4">
+            Each family's responses were recorded meticulously, ensuring
+            accuracy and completeness. Once all the data was collected, I
+            organized it into a tabular format for clear presentation and
+            analysis. The table encapsulates the primary data collected
+            through the census method, meticulously outlining each family's
+            demographic, socioeconomic, and health-related information.
+        </p>
+        <p class="text-gray-700 mb-4">
+            In the table, each row represents a different family, while each
+            column corresponds to a specific aspect of the questionnaire.
+            The demographic information includes the number of people in the
+            household, the ages of residents, and the presence of children,
+            adults, and elderly individuals. Socioeconomic details encompass
+            education levels, total household income, main sources of
+            income, monthly expenses, percentage of income spent on housing,
+            and savings status.
+        </p>
+        <p class="text-gray-700 mb-4">
+            Moreover, health-related indicators such as overall health
+            perception and the presence of long-term health problems or
+            disabilities are also included. Finally, employment-related
+            data, such as the number of adults full-time or part-time jobs,
+            provides insight into the economic activity within each
+            household.</p>
+        <p class="text-gray-700 mb-4">
+            The table serves as a comprehensive snapshot of the surveyed
+            families' characteristics, offering valuable insights into their
+            social, economic, and health dynamics. By presenting the data in
+            this structured manner, it becomes easier to identify patterns,
+            trends, and disparities, facilitating further analysis and
+            interpretation.
+        </p>
+        <table class="table-auto">
+            <thead>
+                <tr>
+                    <th class="px-4 py-2">Family</th>
+                    <th class="px-4 py-2">People in Household</th>
+                    <th class="px-4 py-2">Ages of Residents</th>
+                    <th class="px-4 py-2">Children under 18</th>
+                    <th class="px-4 py-2">Adults (18-64)</th>
+                    <th class="px-4 py-2">Elderly (65+)</th>
+                    <th class="px-4 py-2">Education Level of Main
+                        Earner</th>
+                    <th class="px-4 py-2">Overall Health</th>
+                    <th class="px-4 py-2">Long-term Health
+                        Problem/Disability</th>
+                    <th class="px-4 py-2">Religion</th>
+                    <th class="px-4 py-2">Total Household Income
+                        (Last Year)</th>
+                    <th class="px-4 py-2">Main Sources of
+                        Income</th>
+                    <th class="px-4 py-2">Monthly Expenses</th>
+                    <th class="px-4 py-2">Percentage of Income Spent
+                        on Housing</th>
+                    <th class="px-4 py-2">Savings Last Year</th>
+                    <th class="px-4 py-2">Adults with Jobs</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="px-4 py-2">Family 1</td>
+                    <td class="px-4 py-2">4</td>
+                    <td class="px-4 py-2">40, 35, 10, 8</td>
+                    <td class="px-4 py-2">2</td>
+                    <td class="px-4 py-2">2</td>
+                    <td class="px-4 py-2">0</td>
+                    <td class="px-4 py-2">Bachelor's degree</td>
+                    <td class="px-4 py-2">Good</td>
+                    <td class="px-4 py-2">No</td>
+                    <td class="px-4 py-2">Christianity</td>
+                    <td class="px-4 py-2">$60,000</td>
+                    <td class="px-4 py-2">Jobs</td>
+                    <td class="px-4 py-2">Rent, Food, Utilities</td>
+                    <td class="px-4 py-2">30%</td>
+                    <td class="px-4 py-2">Yes</td>
+                    <td class="px-4 py-2">2 (Full-time)</td>
+                </tr>
+                <tr>
+                    <td class="px-4 py-2">Family 2</td>
+                    <td class="px-4 py-2">3</td>
+                    <td class="px-4 py-2">55, 50, 18</td>
+                    <td class="px-4 py-2">0</td>
+                    <td class="px-4 py-2">2</td>
+                    <td class="px-4 py-2">1</td>
+                    <td class="px-4 py-2">High school diploma</td>
+                    <td class="px-4 py-2">Fair</td>
+                    <td class="px-4 py-2">Yes</td>
+                    <td class="px-4 py-2">Islam</td>
+                    <td class="px-4 py-2">$45,000</td>
+                    <td class="px-4 py-2">Jobs</td>
+                    <td class="px-4 py-2">Mortgage, Food, Utilities</td>
+                    <td class="px-4 py-2">25%</td>
+                    <td class="px-4 py-2">No</td>
+                    <td class="px-4 py-2">2 (Full-time)</td>
+                </tr>
+                <tr>
+                    <td class="px-4 py-2">Family 3</td>
+                    <td class="px-4 py-2">5</td>
+                    <td class="px-4 py-2">30, 28, 5, 3, 70</td>
+                    <td class="px-4 py-2">2</td>
+                    <td class="px-4 py-2">2</td>
+                    <td class="px-4 py-2">1</td>
+                    <td class="px-4 py-2">Master's degree</td>
+                    <td class="px-4 py-2">Excellent</td>
+                    <td class="px-4 py-2">No</td>
+                    <td class="px-4 py-2">None</td>
+                    <td class="px-4 py-2">$80,000</td>
+                    <td class="px-4 py-2">Jobs, Self-employment</td>
+                    <td class="px-4 py-2">Rent, Education, Food</td>
+                    <td class="px-4 py-2">35%</td>
+                    <td class="px-4 py-2">Yes</td>
+                    <td class="px-4 py-2">2 (Part-time)</td>
+                </tr>
+                <tr>
+                    <td class="px-4 py-2">Family 4</td>
+                    <td class="px-4 py-2">2</td>
+                    <td class="px-4 py-2">60, 65</td>
+                    <td class="px-4 py-2">0</td>
+                    <td class="px-4 py-2">2</td>
+                    <td class="px-4 py-2">0</td>
+                    <td class="px-4 py-2">Some college</td>
+                    <td class="px-4 py-2">Good</td>
+                    <td class="px-4 py-2">No</td>
+                    <td class="px-4 py-2">Christianity</td>
+                    <td class="px-4 py-2">$50,000</td>
+                    <td class="px-4 py-2">Jobs</td>
+                    <td class="px-4 py-2">Mortgage, Utilities,
+                        Healthcare</td>
+                    <td class="px-4 py-2">40%</td>
+                    <td class="px-4 py-2">Yes</td>
+                    <td class="px-4 py-2">2 (Part-time)</td>
+                </tr>
+
+                <tr>
+                    <td class="px-4 py-2">Family 5</td>
+                    <td class="px-4 py-2">6</td>
+                    <td class="px-4 py-2">45, 42, 20, 18, 16, 70</td>
+                    <td class="px-4 py-2">3</td>
+                    <td class="px-4 py-2">2</td>
+                    <td class="px-4 py-2">1</td>
+                    <td class="px-4 py-2">Doctorate degree</td>
+                    <td class="px-4 py-2">Excellent</td>
+                    <td class="px-4 py-2">No</td>
+                    <td class="px-4 py-2">Buddhism</td>
+                    <td class="px-4 py-2">$120,000</td>
+                    <td class="px-4 py-2">Jobs</td>
+                    <td class="px-4 py-2">Rent, Education, Healthcare</td>
+                    <td class="px-4 py-2">20%</td>
+                    <td class="px-4 py-2">Yes</td>
+                    <td class="px-4 py-2">3 (Full-time)</td>
+                </tr>
+                <tr>
+                    <td class="px-4 py-2">Family 6</td>
+                    <td class="px-4 py-2">3</td>
+                    <td class="px-4 py-2">35, 32, 8</td>
+                    <td class="px-4 py-2">1</td>
+                    <td class="px-4 py-2">2</td>
+                    <td class="px-4 py-2">0</td>
+                    <td class="px-4 py-2">Bachelor's degree</td>
+                    <td class="px-4 py-2">Fair</td>
+                    <td class="px-4 py-2">Yes</td>
+                    <td class="px-4 py-2">Christianity</td>
+                    <td class="px-4 py-2">$55,000</td>
+                    <td class="px-4 py-2">Jobs</td>
+                    <td class="px-4 py-2">Rent, Food, Transportation</td>
+                    <td class="px-4 py-2">30%</td>
+                    <td class="px-4 py-2">Yes</td>
+                    <td class="px-4 py-2">2 (Full-time)</td>
+                </tr>
+                <tr>
+                    <td class="px-4 py-2">Family 7</td>
+                    <td class="px-4 py-2">4</td>
+                    <td class="px-4 py-2">50, 45, 22, 20</td>
+                    <td class="px-4 py-2">2</td>
+                    <td class="px-4 py-2">2</td>
+                    <td class="px-4 py-2">0</td>
+                    <td class="px-4 py-2">High school diploma</td>
+                    <td class="px-4 py-2">Good</td>
+                    <td class="px-4 py-2">Yes</td>
+                    <td class="px-4 py-2">Judaism</td>
+                    <td class="px-4 py-2">$70,000</td>
+                    <td class="px-4 py-2">Jobs</td>
+                    <td class="px-4 py-2">Rent, Food, Utilities</td>
+                    <td class="px-4 py-2">28%</td>
+                    <td class="px-4 py-2">Yes</td>
+                    <td class="px-4 py-2">2 (Full-time)</td>
+                </tr>
+                <tr>
+                    <td class="px-4 py-2">Family 8</td>
+                    <td class="px-4 py-2">5</td>
+                    <td class="px-4 py-2">40, 38, 15, 12, 70</td>
+                    <td class="px-4 py-2">2</td>
+                    <td class="px-4 py-2">2</td>
+                    <td class="px-4 py-2">1</td>
+                    <td class="px-4 py-2">Some college</td>
+                    <td class="px-4 py-2">Fair</td>
+                    <td class="px-4 py-2">No</td>
+                    <td class="px-4 py-2">Christianity</td>
+                    <td class="px-4 py-2">$65,000</td>
+                    <td class="px-4 py-2">Jobs</td>
+                    <td class="px-4 py-2">Mortgage, Education,
+                        Utilities</td>
+                    <td class="px-4 py-2">32%</td>
+                    <td class="px-4 py-2">Yes</td>
+                    <td class="px-4 py-2">2 (Part-time)</td>
+                </tr>
+
+                <tr>
+                    <td class=" px-4 py-2">Family 9</td>
+                    <td class="px-4 py-2">2</td>
+                    <td class="px-4 py-2">55, 60</td>
+                    <td class="px-4 py-2">0</td>
+                    <td class="px-4 py-2">2</td>
+                    <td class="px-4 py-2">0</td>
+                    <td class="px-4 py-2">High school diploma</td>
+                    <td class="px-4 py-2">Poor</td>
+                    <td class="px-4 py-2">Yes</td>
+                    <td class="px-4 py-2">None</td>
+                    <td class="px-4 py-2">$40,000</td>
+                    <td class="px-4 py-2">Jobs</td>
+                    <td class="px-4 py-2">Mortgage, Healthcare,
+                        Utilities</td>
+                    <td class="px-4 py-2">35%</td>
+                    <td class="px-4 py-2">No</td>
+                    <td class="px-4 py-2">2 (Full-time)</td>
+                </tr>
+                <tr>
+                    <td class="px-4 py-2">Family 10</td>
+                    <td class="px-4 py-2">6</td>
+                    <td class="px-4 py-2">30, 28, 10, 8, 6, 65</td>
+                    <td class="px-4 py-2">3</td>
+                    <td class="px-4 py-2">2</td>
+                    <td class="px-4 py-2">1</td>
+                    <td class="px-4 py-2">Bachelor's degree</td>
+                    <td class="px-4 py-2">Good</td>
+                    <td class="px-4 py-2">No</td>
+                    <td class="px-4 py-2">Christianity</td>
+                    <td class="px-4 py-2">$75,000</td>
+                    <td class="px-4 py-2">Jobs</td>
+                    <td class="px-4 py-2">Rent, Food, Education</td>
+                    <td class="px-4 py-2">30%</td>
+                    <td class="px-4 py-2">Yes</td>
+                    <td class="px-4 py-2">3 (Full-time)</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
