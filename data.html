@@ -82,6 +82,43 @@
                 background-color: #f7b596;
                 color:#1c2a31;
             }
+
+            .chart-container {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                margin: 0 auto;
+                width: 80%;
+                padding: 20px;
+                box-sizing: border-box;
+            }
+            
+            .chart-container div {
+                flex-basis: 48%;
+                margin: 10px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                border-radius: 4px;
+                padding: 20px;
+                background-color: #f9f9f9;
+                align-self: center;
+            }
+            
+            .chart-container h2 {
+                text-align: center;
+                color: #1c2a31;
+                margin-bottom: 20px;
+            }
+            
+            .chart-container canvas {
+                display: block;
+                margin: 0 auto;
+            }
+            
+            .caption {
+                text-align: justify;
+                line-height: 1.5;
+            }
+            
             
             /* Media queries for different phone sizes */
             @media screen and (max-width: 412px) and (max-height: 883px) {
@@ -491,7 +528,7 @@
             <div>
                 <h2>Household Size</h2>
                 <canvas id="householdSizeChart" width="800"
-                    height="600"></canvas><br>
+                    height="400"></canvas><br>
                 <p class="caption"
                     style="font-size: 20px; margin: 20px 20px 20px 20px;padding: 10px; color: #1c2a31; text-align: center;">This
                     bar chart displays the number of people
@@ -502,7 +539,7 @@
 
             <div>
                 <h2>Age Groups</h2>
-                <canvas id="ageGroupChart" width="400" height="300"></canvas>
+                <canvas id="ageGroupChart" width="600" height="200"></canvas>
                 <p class="caption"
                     style="font-size: 20px; margin: 20px 20px 20px 20px;padding: 10px; color: #1c2a31; text-align: center;">This
                     pie chart illustrates the distribution
@@ -515,8 +552,8 @@
         <div class="chart-container">
             <div>
                 <h2>Education Levels</h2>
-                <canvas id="educationLevelChart" width="700"
-                    height="400"></canvas><br>
+                <canvas id="educationLevelChart" width="600"
+                    height="200"></canvas><br>
                 <p class="caption"
                     style="font-size: 20px; margin: 20px 20px 20px 20px;padding: 10px; color: #1c2a31; text-align: center;">This
                     doughnut chart shows the distribution of
@@ -668,8 +705,8 @@
                       {
                         label: "Income Sources",
                         data: incomeSourceCounts,
-                        backgroundColor: ["rgba(255, 99, 132, 0.6)", "rgba(54, 162, 235, 0.4)"],
-                        borderColor: ["rgba(255, 99, 132, 1)", "rgba(54, 162, 235, 1)"],
+                        backgroundColor: ["rgba(147, 9, 222, 0.6)", "rgba(100, 245, 42, 0.8)"],
+                        borderColor: ["rgba(147, 9, 132, 1)", "rgba(54, 162, 235, 1)"],
                         borderWidth: 1,
                       },
                     ],
