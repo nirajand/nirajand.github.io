@@ -7,11 +7,23 @@
         <link
             href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
             rel="stylesheet">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.css" />
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
         <style>
             body {
-                font-family: 'Montserrat', sans-serif;
+                font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
                 background-color: #f9fafb;
             }
+
+            canvas {
+                max-width: 800px;
+                margin: 0 auto;
+              }
 
             div .questionnaire {
                 display: grid;
@@ -50,14 +62,14 @@
             }
             
             th, td {
-                border: 2px solid #957536;
+                border: 2px solid rgb(149, 117, 54);
                 padding: 10px;
                 text-align: left;
                 width: 800px;
             }
             
             th {
-                background-color: #f6cd7a;
+                background-color: rgb(246, 205, 122);
                 color: #1c2a31;
             }
             
@@ -90,6 +102,15 @@
                     font-size: 11px; /* Decrease font size for iPhone X and similar devices */
                 }
             }
+
+            h1{
+                font-size: 50px;
+                align-items: center;
+                text-align: center;
+                margin: 20px 20px 20px 20px;
+                padding: 10px;
+                color: #1c2a31;
+            }
             
             h2{
                 font-size: 45px;
@@ -114,6 +135,8 @@
                 padding: 10px;
                 color: #5C3429;
             }
+
+
         </style>
     </head>
     <body class="bg-gray-100 p-4">
@@ -263,7 +286,7 @@
             </thead>
             <tbody>
                 <tr>
-                    <td class="px-4 py-2">Family 1</td>
+                    <td class="px-4 py-2">Suk Prasad Adhikari</td>
                     <td class="px-4 py-2">4</td>
                     <td class="px-4 py-2">40, 35, 10, 8</td>
                     <td class="px-4 py-2">2</td>
@@ -273,7 +296,7 @@
                     <td class="px-4 py-2">Good</td>
                     <td class="px-4 py-2">No</td>
                     <td class="px-4 py-2">Christianity</td>
-                    <td class="px-4 py-2">$60,000</td>
+                    <td class="px-4 py-2"> Rs.60,000</td>
                     <td class="px-4 py-2">Jobs</td>
                     <td class="px-4 py-2">Rent, Food, Utilities</td>
                     <td class="px-4 py-2">30%</td>
@@ -281,7 +304,7 @@
                     <td class="px-4 py-2">2 (Full-time)</td>
                 </tr>
                 <tr>
-                    <td class="px-4 py-2">Family 2</td>
+                    <td class="px-4 py-2">Surendra Bhattarai</td>
                     <td class="px-4 py-2">3</td>
                     <td class="px-4 py-2">55, 50, 18</td>
                     <td class="px-4 py-2">0</td>
@@ -291,7 +314,7 @@
                     <td class="px-4 py-2">Fair</td>
                     <td class="px-4 py-2">Yes</td>
                     <td class="px-4 py-2">Islam</td>
-                    <td class="px-4 py-2">$45,000</td>
+                    <td class="px-4 py-2"> Rs.45,000</td>
                     <td class="px-4 py-2">Jobs</td>
                     <td class="px-4 py-2">Mortgage, Food, Utilities</td>
                     <td class="px-4 py-2">25%</td>
@@ -299,7 +322,7 @@
                     <td class="px-4 py-2">2 (Full-time)</td>
                 </tr>
                 <tr>
-                    <td class="px-4 py-2">Family 3</td>
+                    <td class="px-4 py-2">Ram Prasad Yadav</td>
                     <td class="px-4 py-2">5</td>
                     <td class="px-4 py-2">30, 28, 5, 3, 70</td>
                     <td class="px-4 py-2">2</td>
@@ -309,7 +332,7 @@
                     <td class="px-4 py-2">Excellent</td>
                     <td class="px-4 py-2">No</td>
                     <td class="px-4 py-2">None</td>
-                    <td class="px-4 py-2">$80,000</td>
+                    <td class="px-4 py-2"> Rs.80,000</td>
                     <td class="px-4 py-2">Jobs, Self-employment</td>
                     <td class="px-4 py-2">Rent, Education, Food</td>
                     <td class="px-4 py-2">35%</td>
@@ -317,7 +340,7 @@
                     <td class="px-4 py-2">2 (Part-time)</td>
                 </tr>
                 <tr>
-                    <td class="px-4 py-2">Family 4</td>
+                    <td class="px-4 py-2">Manoj Tiwari</td>
                     <td class="px-4 py-2">2</td>
                     <td class="px-4 py-2">60, 65</td>
                     <td class="px-4 py-2">0</td>
@@ -327,7 +350,7 @@
                     <td class="px-4 py-2">Good</td>
                     <td class="px-4 py-2">No</td>
                     <td class="px-4 py-2">Christianity</td>
-                    <td class="px-4 py-2">$50,000</td>
+                    <td class="px-4 py-2"> Rs.50,000</td>
                     <td class="px-4 py-2">Jobs</td>
                     <td class="px-4 py-2">Mortgage, Utilities,
                         Healthcare</td>
@@ -337,7 +360,7 @@
                 </tr>
 
                 <tr>
-                    <td class="px-4 py-2">Family 5</td>
+                    <td class="px-4 py-2">Tilak Poudel</td>
                     <td class="px-4 py-2">6</td>
                     <td class="px-4 py-2">45, 42, 20, 18, 16, 70</td>
                     <td class="px-4 py-2">3</td>
@@ -347,7 +370,7 @@
                     <td class="px-4 py-2">Excellent</td>
                     <td class="px-4 py-2">No</td>
                     <td class="px-4 py-2">Buddhism</td>
-                    <td class="px-4 py-2">$120,000</td>
+                    <td class="px-4 py-2"> Rs.120,000</td>
                     <td class="px-4 py-2">Jobs</td>
                     <td class="px-4 py-2">Rent, Education, Healthcare</td>
                     <td class="px-4 py-2">20%</td>
@@ -355,7 +378,7 @@
                     <td class="px-4 py-2">3 (Full-time)</td>
                 </tr>
                 <tr>
-                    <td class="px-4 py-2">Family 6</td>
+                    <td class="px-4 py-2">Bishnu Rana</td>
                     <td class="px-4 py-2">3</td>
                     <td class="px-4 py-2">35, 32, 8</td>
                     <td class="px-4 py-2">1</td>
@@ -365,7 +388,7 @@
                     <td class="px-4 py-2">Fair</td>
                     <td class="px-4 py-2">Yes</td>
                     <td class="px-4 py-2">Christianity</td>
-                    <td class="px-4 py-2">$55,000</td>
+                    <td class="px-4 py-2"> Rs.55,000</td>
                     <td class="px-4 py-2">Jobs</td>
                     <td class="px-4 py-2">Rent, Food, Transportation</td>
                     <td class="px-4 py-2">30%</td>
@@ -373,7 +396,7 @@
                     <td class="px-4 py-2">2 (Full-time)</td>
                 </tr>
                 <tr>
-                    <td class="px-4 py-2">Family 7</td>
+                    <td class="px-4 py-2">Agni Prasad Dhakal</td>
                     <td class="px-4 py-2">4</td>
                     <td class="px-4 py-2">50, 45, 22, 20</td>
                     <td class="px-4 py-2">2</td>
@@ -383,7 +406,7 @@
                     <td class="px-4 py-2">Good</td>
                     <td class="px-4 py-2">Yes</td>
                     <td class="px-4 py-2">Judaism</td>
-                    <td class="px-4 py-2">$70,000</td>
+                    <td class="px-4 py-2"> Rs.70,000</td>
                     <td class="px-4 py-2">Jobs</td>
                     <td class="px-4 py-2">Rent, Food, Utilities</td>
                     <td class="px-4 py-2">28%</td>
@@ -391,7 +414,7 @@
                     <td class="px-4 py-2">2 (Full-time)</td>
                 </tr>
                 <tr>
-                    <td class="px-4 py-2">Family 8</td>
+                    <td class="px-4 py-2">Krishna Chapagain</td>
                     <td class="px-4 py-2">5</td>
                     <td class="px-4 py-2">40, 38, 15, 12, 70</td>
                     <td class="px-4 py-2">2</td>
@@ -401,7 +424,7 @@
                     <td class="px-4 py-2">Fair</td>
                     <td class="px-4 py-2">No</td>
                     <td class="px-4 py-2">Christianity</td>
-                    <td class="px-4 py-2">$65,000</td>
+                    <td class="px-4 py-2"> Rs.65,000</td>
                     <td class="px-4 py-2">Jobs</td>
                     <td class="px-4 py-2">Mortgage, Education,
                         Utilities</td>
@@ -411,7 +434,7 @@
                 </tr>
 
                 <tr>
-                    <td class=" px-4 py-2">Family 9</td>
+                    <td class=" px-4 py-2">Amit Aryal</td>
                     <td class="px-4 py-2">2</td>
                     <td class="px-4 py-2">55, 60</td>
                     <td class="px-4 py-2">0</td>
@@ -421,7 +444,7 @@
                     <td class="px-4 py-2">Poor</td>
                     <td class="px-4 py-2">Yes</td>
                     <td class="px-4 py-2">None</td>
-                    <td class="px-4 py-2">$40,000</td>
+                    <td class="px-4 py-2"> Rs.40,000</td>
                     <td class="px-4 py-2">Jobs</td>
                     <td class="px-4 py-2">Mortgage, Healthcare,
                         Utilities</td>
@@ -430,7 +453,7 @@
                     <td class="px-4 py-2">2 (Full-time)</td>
                 </tr>
                 <tr>
-                    <td class="px-4 py-2">Family 10</td>
+                    <td class="px-4 py-2">Thakur Bahadur Nepali</td>
                     <td class="px-4 py-2">6</td>
                     <td class="px-4 py-2">30, 28, 10, 8, 6, 65</td>
                     <td class="px-4 py-2">3</td>
@@ -440,7 +463,7 @@
                     <td class="px-4 py-2">Good</td>
                     <td class="px-4 py-2">No</td>
                     <td class="px-4 py-2">Christianity</td>
-                    <td class="px-4 py-2">$75,000</td>
+                    <td class="px-4 py-2"> Rs.75,000</td>
                     <td class="px-4 py-2">Jobs</td>
                     <td class="px-4 py-2">Rent, Food, Education</td>
                     <td class="px-4 py-2">30%</td>
@@ -449,5 +472,227 @@
                 </tr>
             </tbody>
         </table>
-    </body>
-</html>
+        <br><br><br>
+        <h1>Family Data Visualizations</h1>
+
+        <br>
+
+        <p
+            style="font-size: 22px; width:1225  px; text-align:justify; display: flex; margin-left:50px; ">The
+            following visualizations
+            provide
+            insights into various aspects of
+            family structures, including household size, age distribution,
+            education levels, and income sources. These charts aim to present
+            the data in a clear and informative manner, allowing for easy
+            understanding and analysis.</p>
+
+        <div class="chart-container">
+            <div>
+                <h2>Household Size</h2>
+                <canvas id="householdSizeChart" width="800"
+                    height="600"></canvas><br>
+                <p class="caption"
+                    style="font-size: 20px; margin: 20px 20px 20px 20px;padding: 10px; color: #1c2a31; text-align: center;">This
+                    bar chart displays the number of people
+                    in each
+                    household, providing an overview of family sizes across the
+                    data set.</p>
+            </div>
+
+            <div>
+                <h2>Age Groups</h2>
+                <canvas id="ageGroupChart" width="400" height="300"></canvas>
+                <p class="caption"
+                    style="font-size: 20px; margin: 20px 20px 20px 20px;padding: 10px; color: #1c2a31; text-align: center;">This
+                    pie chart illustrates the distribution
+                    of age groups
+                    (children, adults, and elderly) among all families, helping
+                    to understand the age structure of the population.</p>
+            </div>
+        </div>
+
+        <div class="chart-container">
+            <div>
+                <h2>Education Levels</h2>
+                <canvas id="educationLevelChart" width="700"
+                    height="400"></canvas><br>
+                <p class="caption"
+                    style="font-size: 20px; margin: 20px 20px 20px 20px;padding: 10px; color: #1c2a31; text-align: center;">This
+                    doughnut chart shows the distribution of
+                    education
+                    levels among the main income earners, highlighting the
+                    diversity of educational backgrounds within the
+                    families.</p>
+            </div>
+
+            <div>
+                <h2>Income Sources</h2>
+                <canvas id="incomeSourceChart" width="600"
+                    height="300"></canvas>
+                <p class="caption"
+                    style="font-size: 20px; margin: 20px 20px 20px 20px;padding: 10px; color: #1c2a31; text-align: center;">This
+                    pie chart depicts the distribution of
+                    income sources
+                    (jobs and self-employment) across all families, providing
+                    insights into the economic activities undertaken by the
+                    households.</p>
+            </div>
+            <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                // Bar chart for household size
+                const families = ["Suk Prasad Adhikari", "Surendra Bhattarai", "Ram Prasad Yadav", "Manoj Tiwari", "Tilak Poudel", "Bishnu Rana", "Agni Prasad Dhakal", "Krishna Chapagain", "Amit Aryal", "Thakur Bahadur Nepali"];
+                const householdSize = [4, 3, 5, 2, 6, 3, 4, 5, 2, 6];
+        
+                const ctx1 = document.getElementById("householdSizeChart").getContext("2d");
+                const householdSizeChart = new Chart(ctx1, {
+                    type: "bar",
+                    data: {
+                      labels: families,
+                      datasets: [
+                        {
+                          label: "Household Size",
+                          data: householdSize,
+                          backgroundColor: "rgb(246, 205, 122)",
+                          borderColor: "rgb(246, 205, 122)",
+                          borderWidth: 1,
+                        },
+                      ],
+                    },
+                    options: {
+                      plugins: {
+                        datalabels: {
+                          color: 'black',
+                          anchor: 'end',
+                          align: 'end',
+                          font: {
+                            weight: 'bold'
+                          },
+                          offset: -20,
+                        }
+                      },
+                      scales: {
+                        y: {
+                          beginAtZero: true,
+                        },
+                      }
+                    },
+                    plugins: [ChartDataLabels]
+                  });
+
+                // Pie chart for age groups
+                const ageGroups = ["Children", "Adults", "Elderly"];
+                const ageGroupCounts = [10, 18, 4];
+        
+                const ctx2 = document.getElementById("ageGroupChart").getContext("2d");
+                const ageGroupChart = new Chart(ctx2, {
+                  type: "pie",
+                  data: {
+                    labels: ageGroups,
+                    datasets: [
+                      {
+                        label: "Age Groups",
+                        data: ageGroupCounts,
+                        backgroundColor: ["rgba(232, 78, 59, 0.7)", "rgba(161, 216, 191, 0.8)", "rgba(246, 205, 122, 0.6)"],
+                        borderColor: ["rgb(232, 78, 59)", "rgb(161, 216, 191)", "rgb(246, 205, 122)"],
+                        borderWidth: 1,
+                      },
+                    ],
+                  },
+                  options: {
+                    plugins: {
+                      datalabels: {
+                        color: 'black',
+                        formatter: (value, context) => {
+                          const label = context.chart.data.labels[context.dataIndex];
+                          const valuePercentage = `${Math.round(value / context.chart.data.datasets[0].data.reduce((a, b) => a + b, 0) * 100)}%`;
+                          return `${label}: ${valuePercentage}`;
+                        },
+                        font: {
+                          weight: 'bold'
+                        }
+                      }
+                    }
+                  },
+                  plugins: [ChartDataLabels]
+                });
+        
+                // Doughnut chart for education levels
+                const educationLevels = ["High School Diploma", "Some College", "Bachelor's Degree", "Master's Degree", "Doctorate Degree"];
+                const educationLevelCounts = [3, 2, 3, 1, 1];
+        
+                const ctx3 = document.getElementById("educationLevelChart").getContext("2d");
+                const educationLevelChart = new Chart(ctx3, {
+                    type: "doughnut",
+                    data: {
+                      labels: educationLevels,
+                      datasets: [
+                        {
+                          label: "Education Levels",
+                          data: educationLevelCounts,
+                          backgroundColor: ["rgba(255, 99, 132, 0.8)", "rgba(54, 162, 235, 0.65)", "rgba(255, 206, 86, 0.8)", "rgba(75, 192, 192, 0.2)", "rgba(153, 102, 255, 0.5)"],
+                          borderColor: ["rgba(255, 99, 132, 1)", "rgba(54, 162, 235, 1)", "rgba(255, 206, 86, 1)", "rgba(75, 192, 192, 1)", "rgba(153, 102, 255, 1)"],
+                          borderWidth: 1,
+                        },
+                      ],
+                    },
+                    options: {
+                      plugins: {
+                        datalabels: {
+                          color: 'black',
+                          formatter: (value, context) => {
+                            const label = context.chart.data.labels[context.dataIndex];
+                            const valueCount = context.chart.data.datasets[0].data[context.dataIndex];
+                            const valuePercentage = `${Math.round(value / context.chart.data.datasets[0].data.reduce((a, b) => a + b, 0) * 100)}%`;
+                            return `${label}: ${valueCount} (${valuePercentage})`;
+                          },
+                          font: {
+                            weight: 'bold'
+                          }
+                        }
+                      }
+                    },
+                    plugins: [ChartDataLabels]
+                  });
+        
+                // Pie chart for income sources
+                const incomeSources = ["Jobs", "Self-employment"];
+                const incomeSourceCounts = [9, 1];
+        
+                const ctx4 = document.getElementById("incomeSourceChart").getContext("2d");
+                const incomeSourceChart = new Chart(ctx4, {
+                  type: "pie",
+                  data: {
+                    labels: incomeSources,
+                    datasets: [
+                      {
+                        label: "Income Sources",
+                        data: incomeSourceCounts,
+                        backgroundColor: ["rgba(255, 99, 132, 0.6)", "rgba(54, 162, 235, 0.4)"],
+                        borderColor: ["rgba(255, 99, 132, 1)", "rgba(54, 162, 235, 1)"],
+                        borderWidth: 1,
+                      },
+                    ],
+                  },
+                  options: {
+                    plugins: {
+                      datalabels: {
+                        color: 'black',
+                        formatter: (value, context) => {
+                          const label = context.chart.data.labels[context.dataIndex];
+                          const valuePercentage = `${Math.round(value / context.chart.data.datasets[0].data.reduce((a, b) => a + b, 0) * 100)}%`;
+                          return `${label}: ${valuePercentage}`;
+                        },
+                        font: {
+                            families: ['Franklin Gothic Medium','Arial Narrow', 'sans-serif'],
+                            weight: 'bold'
+                        }
+                      }
+                    }
+                  },
+                  plugins: [ChartDataLabels]
+                });
+              });
+        </script>
+        </body>
+    </html>
