@@ -173,7 +173,6 @@
                 color: #5C3429;
             }
 
-
         </style>
     </head>
     <body class="bg-gray-100 p-4">
@@ -515,7 +514,7 @@
         <br>
 
         <p
-            style="font-size: 22px; width:1225  px; text-align:justify; display: flex; margin-left:50px; ">The
+            style="font-size: 22px; width:1225px; text-align:justify; display: flex; margin-left:50px; ">The
             following visualizations
             provide
             insights into various aspects of
@@ -575,6 +574,7 @@
                     insights into the economic activities undertaken by the
                     households.</p>
             </div>
+
             <script>
             document.addEventListener("DOMContentLoaded", () => {
                 // Bar chart for household size
@@ -623,36 +623,36 @@
         
                 const ctx2 = document.getElementById("ageGroupChart").getContext("2d");
                 const ageGroupChart = new Chart(ctx2, {
-                  type: "pie",
-                  data: {
+                type: "pie",
+                data: {
                     labels: ageGroups,
-                    datasets: [
-                      {
-                        label: "Age Groups",
-                        data: ageGroupCounts,
-                        backgroundColor: ["rgba(232, 78, 59, 0.7)", "rgba(161, 216, 191, 0.8)", "rgba(246, 205, 122, 0.6)"],
-                        borderColor: ["rgb(232, 78, 59)", "rgb(161, 216, 191)", "rgb(246, 205, 122)"],
-                        borderWidth: 1,
-                      },
-                    ],
-                  },
-                  options: {
+                    datasets: [{
+                    label: "Age Groups",
+                    data: ageGroupCounts,
+                    backgroundColor: ["rgba(232, 78, 59, 0.7)", "rgba(161, 216, 191, 0.8)", "rgba(246, 205, 122, 0.6)"],
+                    borderColor: ["rgb(232, 78, 59)", "rgb(161, 216, 191)", "rgb(246, 205, 122)"],
+                    borderWidth: 1,
+                    }, ],
+                },
+                options: {
                     plugins: {
-                      datalabels: {
+                    datalabels: {
                         color: 'black',
                         formatter: (value, context) => {
-                          const label = context.chart.data.labels[context.dataIndex];
-                          const valuePercentage = `${Math.round(value / context.chart.data.datasets[0].data.reduce((a, b) => a + b, 0) * 100)}%`;
-                          return `${label}: ${valuePercentage}`;
+                        const label = context.chart.data.labels[context.dataIndex];
+                        const total = context.chart.data.datasets[0].data.reduce((a, b) => a + b, 0);
+                        const valuePercentage = `${((value / total) * 100).toFixed(2)}%`;
+                        return `${label}: ${value} (${valuePercentage})`;
                         },
                         font: {
-                          weight: 'bold'
+                        weight: 'bold'
                         }
-                      }
                     }
-                  },
-                  plugins: [ChartDataLabels]
+                    }
+                },
+                plugins: [ChartDataLabels]
                 });
+
         
                 // Doughnut chart for education levels
                 const educationLevels = ["High School Diploma", "Some College", "Bachelor's Degree", "Master's Degree", "Doctorate Degree"];
@@ -731,5 +731,6 @@
                 });
               });
         </script>
+
         </body>
     </html>
