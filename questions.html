@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Web Development Questions | Final Term</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap"
+            rel="stylesheet">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap"
+            rel="stylesheet">
+        <style>
+            /* CSS for background */
+            html {
+                --s: 16px; /* control the size */
+                --c1: rgba(60, 37, 37, 0.955); /* Background color with minimal opacity */
+                --c2: rgba(46, 46, 43, 0.97); /* Background color with minimal opacity */
+                --g: rgba(0, 0, 0, 0.815) 66%, var(--c1) 67% 98%, rgba(0, 0, 0, 0.2);
+                background: radial-gradient(30% 50% at 30% 100%, var(--g)), radial-gradient(30% 50% at 70% 0%, var(--g)) var(--s) 0, repeating-linear-gradient(90deg, var(--c1) 0 10%, var(--c2) 0 50%);
+                background-size: calc(10 * var(--s)) calc(6 * var(--s));
+                animation: g17 1.5s infinite linear;
+                font-family: 'DM Mono', monospace;
+            }
+            
+            @keyframes g17 {
+                to {
+                    background-position: 0 calc(-6 * var(--s)), var(--s) calc(6 * var(--s)), 0 0;
+                }
+            }
+
+            /* CSS for <code> element with JS-like code formatting color */
+            code {
+                font-family: 'DM Mono', monospace; /* Use DM Mono font */
+                background-color: #f0f0f0; /* Background color */
+                color: #000; /* Text color */
+                padding: 3px 8px; /* Padding around the code */
+                border-radius: 8px; /* Rounded corners */
+                font-size: 0.8em; /* Font size */
+                letter-spacing: 0.3px;
+            }
+
+            code.html {
+                color: #761adf;
+                font-weight: bold;
+            }
+
+            code.js {
+                color: #ab3270;
+                font-weight: bold;
+            }
+
+            /* CSS for buttons */
+
+            button {
+                background-color: #db3000; /* Primary color */
+                color: #fff; /* Text color */
+                border: none;
+                padding: 10px 20px;
+                font-size: 18px;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+                margin: 0 10px;
+                font-family: "Bricolage Grotesque", sans-serif;
+            }
+
+            button:hover {
+                background-color: #ff7f50; /* Hover color */
+            }
+
+
+            /* CSS for content */
+            body {
+            margin: 0;
+            padding: 20px;
+            }
+
+            h2 {
+            color: #fffdfc; /* Primary color */
+            font-size: 30px;
+            }
+
+            ol li{
+                font-size: 21px;
+                padding: 10px;
+                color: rgba(243, 243, 243, 0.967);
+                text-align: justify;
+                font-family: "Bricolage Grotesque", sans-serif;
+            }
+
+            .section {
+            padding: 0px;
+            border-radius: 10px;
+            }
+
+            .questions {
+            list-style-type: decimal;
+            padding-left: 20px;
+            }
+
+            /* SVG styling */
+            .svg-icon {
+            width: 1em;
+            height: 1em;
+            vertical-align: -0.15em;
+            fill: currentColor;
+            overflow: hidden;
+            }
+
+            /* Media queries */
+            @media screen and (min-width: 768px) {
+            .container {
+                max-width: 900px;
+                margin: 0 auto;
+            }
+            }
+
+            .button-container{
+                display: flex;
+                justify-content: center;
+                margin-bottom: 20px;
+                margin-top: 30px;
+            }
+
+            #short-questions, #long-questions > ol li{
+                padding-bottom:30px;
+            }
+</style>
+    </head>
+    <body>
+
+        <h1
+            style="display: grid; color:#fffdef; justify-content:center; font-family: 'Bricolage Grotesque', sans-serif; font-size:55px;">Questions
+            For Web Development II - Final Term</h1>
+        <br>
+        <!-- Buttons to redirect to specific question sections -->
+        <div class="button-container">
+            <button onclick="scrollToSection('very-short-questions')">Very Short
+                Answer Questions</button>
+            <button onclick="scrollToSection('short-questions')">Short Answer
+                Questions</button>
+            <button onclick="scrollToSection('long-questions')">Long Answer
+                Questions</button>
+        </div>
+        <br><br>
+        <div class="container">
+            <h2>Very Short Answer Questions (2 marks each):</h2>
+            <div class="section" id="very-short-questions">
+                <ol class="questions">
+                    <li>What is the difference between Web 1.0, Web 2.0, and Web
+                        3.0?</li>
+                    <li>Define asynchronous programming in the context of web
+                        development.</li>
+                    <li>What is the purpose of an <code class="html">XML
+                            namespace</code>?</li>
+                    <li>What is the difference between <code
+                            class="js">let</code> and
+                        <code class="js">const</code> in JavaScript?</li>
+                    <li>Explain the role of digital certificates in web
+                        security.</li>
+                    <li>What is the MVC (Model-View-Controller)
+                        architecture?</li>
+                    <li>What is the role of CSS in web development?</li>
+                    <li>Explain the concept of cross-site scripting (XSS)
+                        attacks.</li>
+                    <li>What is the purpose of the MVC (Model-View-Controller)
+                        architecture in web application development?</li>
+                    <li>What is the purpose of media queries in CSS?</li>
+                    <li>What is the difference between Web 1.0 and Web 2.0?</li>
+                </ol>
+            </div>
+            <br>
+            <h2>Short Answer Questions (5 marks each):</h2>
+            <div class="section" id="short-questions">
+                <ol class="questions">
+                    <li>Describe the process of handling HTTP requests and
+                        responses in a web server.</li>
+                    <li>Explain the concept of responsive web design and how it
+                        can be achieved using CSS media queries.</li>
+                    <li>Write an XML document representing a simple book
+                        catalog, including elements for title, author,
+                        publisher, and publication year.</li>
+                    <li>Implement a JavaScript function that uses promises and
+                        the fetch API to retrieve data from a JSON
+                        endpoint.</li>
+                    <li>Discuss the importance of input validation and
+                        sanitization in web security, and provide examples of
+                        techniques for mitigating common vulnerabilities like
+                        SQL injection and XSS.</li>
+                    <li>Compare and contrast Bootstrap and CSS Grid/Flexbox for
+                        creating responsive layouts.</li>
+                    <li>Explain the concept of unit testing in web application
+                        development and its importance.</li>
+                    <li>Write a JavaScript function that uses promises and the
+                        <code class="js">async/await</code> syntax to fetch data
+                        from an
+                        API.</li>
+                    <li>Describe the concept of digital certificates and their
+                        role in web security.</li>
+                    <li>Create an XML document that represents a simple data
+                        structure, such as a book catalog, and include at least
+                        one XML namespace and one XML attribute.</li>
+                    <li>Explain the advantages and disadvantages of using a CSS
+                        framework like Bootstrap for web development.</li>
+                    <li>Explain the concept of encryption and decryption in web
+                        security, and discuss the role of digital certificates
+                        and secure sockets layer (SSL) in ensuring secure
+                        communication.</li>
+                </ol>
+            </div>
+            <br>
+            <h2>Long Answer Questions (7.5 marks each):</h2>
+            <div class="section" id="long-questions">
+                <ol class="questions">
+                    <li>Design and implement a responsive web page layout using
+                        CSS Grid or Flexbox, with appropriate styling and media
+                        queries for different screen sizes. Explain the
+                        advantages of your chosen layout technique over
+                        traditional methods.</li>
+                    <li>Develop a JavaScript class that represents a shopping
+                        cart for an e-commerce website. The class should have
+                        methods for adding items, removing items, calculating
+                        the total cost, and applying discounts. Implement
+                        inheritance to create a subclass for a "premium"
+                        shopping cart with additional features.</li>
+                    <li>Describe the process of securing a web application, from
+                        the database design and server-side scripting to
+                        client-side validation and authentication. Discuss
+                        various security measures and best practices, such as
+                        encryption, salting and hashing of passwords, and
+                        protection against common web application attacks like
+                        XSS and CSRF.</li>
+                    <li>Create an XML document that represents a simple data
+                        structure, such as a book catalog or a student record
+                        system. Validate the XML document using either a
+                        Document Type Definition (DTD) or an XML Schema
+                        Definition (XSD). Explain the process and the importance
+                        of validating XML documents.</li>
+                    <li>Implement a class in JavaScript that represents a simple
+                        e-commerce shopping cart. The class should have methods
+                        for adding items to the cart, removing items from the
+                        cart, and calculating the total cost of the items in the
+                        cart. Demonstrate the use of inheritance by creating a
+                        subclass that extends the shopping cart class with
+                        additional functionality, such as applying discounts or
+                        handling shipping costs.</li>
+                    <li>Discuss the principles of web security and the potential
+                        vulnerabilities that web applications may face. Explain
+                        the concepts of authentication, encryption, and input
+                        validation, and provide examples of how these can be
+                        implemented in a web application to mitigate security
+                        risks. Additionally, describe strategies for securing a
+                        web application, such as implementing SSL/TLS and
+                        protecting against common attacks like SQL injection and
+                        cross-site scripting (XSS).</li>
+                    <li>Implement a simple JavaScript class that represents a
+                        bank account, with properties for account number,
+                        balance, and account holder name. Include methods for
+                        depositing and withdrawing funds, as well as inheritance
+                        for creating different types of accounts (e.g., savings,
+                        checking). Demonstrate the use of constructor functions,
+                        getters, and setters.</li>
+                    <li>Design and implement a responsive web page layout using
+                        CSS Grid or Flexbox. The layout should include a header,
+                        navigation menu, main content area, and footer. Explain
+                        the advantages of using these modern layout techniques
+                        over traditional methods, such as floats and
+                        positioning. Incorporate media queries to adjust the
+                        layout for different screen sizes and device types.</li>
+                </ol>
+            </div>
+        </div>
+
+        <script>
+            // Function to scroll to a specific section by ID
+            function scrollToSection(sectionId) {
+                const section = document.getElementById(sectionId);
+                if (section) {
+                    section.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+        </script>
+    </body>
+</html>
