@@ -32,33 +32,6 @@ const displayItems = (item, index, active) => {
   item.style.setProperty ('--active', (index - active) / $items.length);
 };
 
-// Update all image elements to load super fast and super smooth
-const $images = document.querySelectorAll ('.carousel-item img');
-
-$images.forEach ($img => {
-  // Lazy load images
-  $img.loading = 'lazy';
-
-  // Preload images
-  const src = $img.getAttribute ('src');
-  const img = new Image ();
-  img.src = src;
-
-  // Optimize image format (replace 'src' attribute with 'data-src' for lazy loading)
-  if (
-    src.endsWith ('.jpg') ||
-    src.endsWith ('.jpeg') ||
-    src.endsWith ('.png')
-  ) {
-    const webpSrc = src.replace (/\.(jpg|jpeg|png)$/, '.webp');
-    img.onload = () => {
-      $img.src = webpSrc;
-      $img.loading = 'eager'; // Load immediately after preload
-    };
-    img.src = webpSrc;
-  }
-});
-
 /*--------------------
 Animate
 --------------------*/
