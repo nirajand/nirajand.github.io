@@ -4,13 +4,13 @@
 
 body {
     overflow: hidden;
-    font-family: "Roboto", serif;
+    font-family: "Montserrat", sans-serif;
     --angle: 135deg;
     background-image: linear-gradient(135deg, #090009, #2a003f);
     animation: gradient 60s ease-in-out infinite;
-    background-size: 90000% 90000%;
     cursor: none;
     scroll-behavior: smooth;
+    height: 100vh;
 }
 
 @keyframes gradient {
@@ -26,7 +26,6 @@ body {
         background-position: 0% 50%;
     }
 }
-
 
 .carousel {
     position: relative;
@@ -265,6 +264,7 @@ body {
     --size: 2px;
     transition-duration: 0.7s;
 }
+
 
 .birthday-cards {
     display: flex;
