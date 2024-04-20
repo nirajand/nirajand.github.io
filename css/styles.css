@@ -133,7 +133,7 @@ body.scrolled header {
 }
 
 .section-heading {
-    color: var(--title-color)
+    color: var(--title-color);
 }
 
 /* Biography Section Styles */
@@ -273,7 +273,7 @@ body.scrolled header {
 /* Achievements Section Styles */
 
 .achievements {
-    background-color: #eaeaea;
+    background-color: #e6e6e6;
     padding: 40px 0;
     font-family: 'Poppins', sans-serif;
 }
@@ -282,19 +282,23 @@ body.scrolled header {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
+    align-items: top;
+}
+
+.achievements .container h2 {
+    margin-top: -100px;
 }
 
 .achievement-item {
     width: 45%;
     min-width: 300px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .achievement-item-heading {
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
-    font-size: 24px;
+    font-size: 28px;
     color: var(--main-color);
     margin-bottom: 10px;
 }
@@ -310,7 +314,7 @@ body.scrolled header {
 
 /* Extra Experiences Section Styles */
 .extra-experiences {
-    background-color: #dddddd;
+    background-color: #ffffff;
     padding: 40px 0;
     font-family: 'Poppins', sans-serif;
 }
@@ -323,13 +327,13 @@ body.scrolled header {
 
 .experience-item {
     width: 45%;
-    min-width: 450px;
+    min-width: 455px;
 }
 
 .experience-item-heading {
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
-    font-size: 24px;
+    font-size: 28px;
     color: var(--main-color);
 }
 
