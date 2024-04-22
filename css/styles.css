@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
 
-
 :root {
     --main-color: #007BFF;
     --main-text-color: #69829c;
@@ -10,7 +9,6 @@
     --footer-color: #555555;
     --font-family: 'Poppins', sans-serif;
 }
-
 
 * {
     box-sizing: border-box;
@@ -35,7 +33,6 @@ header:hover {
     background-color: var(--main-color);
 }
 
-/* Title stays on the left */
 .logo {
     font-family: var(--font-family);
     font-weight: 600;
@@ -51,7 +48,6 @@ header:hover {
     color: #ff5d18;
 }
 
-/* Navigation menu items stay on the right */
 .nav-menu {
     margin-top: -35px;
     list-style: none;
@@ -63,13 +59,10 @@ header:hover {
     margin-left: 100px;
 }
 
-/* Background color change on scroll */
 body.scrolled header {
     background-color: #222;
-    /* Change to your desired color on scroll */
 }
 
-/* Add smooth scrolling effect when clicking on navigation links */
 .nav-menu-link {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
@@ -84,7 +77,6 @@ body.scrolled header {
     font-weight: 500;
 }
 
-/* Hero Section Styles */
 .hero {
     background-size: cover;
     background-position: center;
@@ -93,7 +85,7 @@ body.scrolled header {
     align-items: center;
     margin-bottom: 0px;
     padding: 40px;
-    margin-top: 8 0px;
+    margin-top: 80px;
 }
 
 .hero-content {
@@ -106,11 +98,11 @@ body.scrolled header {
 }
 
 .hero-image {
-    width: 300px;
-    height: 300px;
+    width: 350px;
+    height: 350px;
     border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     font-family: 'Poppins', sans-serif;
     align-self: center;
 }
@@ -136,7 +128,6 @@ body.scrolled header {
     color: var(--title-color);
 }
 
-/* Biography Section Styles */
 .biography {
     background-color: var(--accent-color);
     padding: 40px 0;
@@ -146,7 +137,7 @@ body.scrolled header {
     padding: 20px;
 }
 
-.biography-content {
+.biography .container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -157,7 +148,7 @@ body.scrolled header {
 .biography-image {
     width: 40%;
     min-width: 500px;
-    border-radius: 10px;
+    border-radius: 40px;
     object-fit: contain;
     image-resolution: from-image;
     image-rendering: auto;
@@ -168,7 +159,6 @@ body.scrolled header {
     min-width: 300px;
 }
 
-/* Resume Section Styles */
 .resume {
     padding: 40px 0;
     padding: 20px;
@@ -226,14 +216,13 @@ body.scrolled header {
     margin-bottom: 10px;
 }
 
-/* Contact Section Styles */
 .contact {
     background-color: #202996;
     padding: 40px 0;
     margin-bottom: 20px;
     padding: 20px;
     font-family: 'Poppins', sans-serif;
-    color: white
+    color: white;
 }
 
 .contact-content {
@@ -270,10 +259,8 @@ body.scrolled header {
     margin-bottom: 30px;
 }
 
-/* Achievements Section Styles */
-
 .achievements {
-    background-color: #e6e6e6;
+    background-color: #f9ffe2;
     padding: 40px 0;
     font-family: 'Poppins', sans-serif;
 }
@@ -285,9 +272,6 @@ body.scrolled header {
     align-items: top;
 }
 
-.achievements .container h2 {
-    margin-top: -100px;
-}
 
 .achievement-item {
     width: 45%;
@@ -300,7 +284,7 @@ body.scrolled header {
     font-weight: 500;
     font-size: 28px;
     color: var(--main-color);
-    margin-bottom: 10px;
+    margin-top: 30px;
 }
 
 .achievement-item-paragraph {
@@ -310,24 +294,39 @@ body.scrolled header {
     color: var(--text-color);
     line-height: 1.5;
     margin-bottom: 10px;
+    text-align: justify;
 }
 
-/* Extra Experiences Section Styles */
+/* Extra Experiences */
 .extra-experiences {
-    background-color: #ffffff;
-    padding: 40px 0;
+    background-color: #fff2cd;
+    padding: 20px 0;
     font-family: 'Poppins', sans-serif;
 }
 
 .extra-experiences .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.experience-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
 }
 
 .experience-item {
-    width: 45%;
-    min-width: 455px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.experience-item:nth-child(odd) {
+    grid-column: 1;
+}
+
+.experience-item:nth-child(even) {
+    grid-column: 2;
 }
 
 .experience-item-heading {
@@ -335,6 +334,7 @@ body.scrolled header {
     font-weight: 500;
     font-size: 28px;
     color: var(--main-color);
+    margin-bottom: 20px;
 }
 
 .experience-item-paragraph {
@@ -344,9 +344,10 @@ body.scrolled header {
     color: var(--text-color);
     line-height: 1.5;
     margin-bottom: 10px;
+    text-align: justify;
+    max-width: 550px;
 }
 
-/* Footer Styles */
 .footer {
     background-color: var(--footer-color);
     padding: 20px 0;
@@ -377,15 +378,12 @@ body.scrolled header {
     text-decoration: none;
 }
 
-/* Add hover effect for social links */
 .social-link:hover {
     opacity: 0.8;
 }
 
-/* Add styles for the hamburger menu button */
 .hamburger {
     display: none;
-    /* Initially hide the button */
     font-size: 24px;
     cursor: pointer;
     background: none;
